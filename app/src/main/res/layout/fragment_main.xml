@@ -13,6 +13,7 @@
     tools:showIn="@layout/activity_main">
 
     <Button
+        android:id="@+id/botoncambio"
         android:layout_width="200px"
         android:layout_height="200px"
         android:text="CAMBIO"
