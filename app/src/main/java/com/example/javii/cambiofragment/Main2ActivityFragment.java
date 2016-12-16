@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A placeholder fragment containing a simple view.
  */
 public class Main2ActivityFragment extends Fragment {
+
+    TextView txt;
+    View segundof;
 
     public Main2ActivityFragment() {
     }
@@ -17,6 +21,12 @@ public class Main2ActivityFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_main2, container, false);
+        segundof = inflater.inflate(R.layout.fragment_main2, container, false);
+        txt = (TextView) segundof.findViewById(R.id.text);
+        return segundof;
+    }
+
+    public void cambiarTexto(String text){
+        txt.setText(text);
     }
 }
