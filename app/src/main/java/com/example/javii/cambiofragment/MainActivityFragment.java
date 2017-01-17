@@ -43,16 +43,16 @@ public class MainActivityFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if(getResources().getBoolean(R.bool.pantallas)){
-                    //Toast toast = Toast.makeText(getActivity(),"Estoy en Portrait", Toast.LENGTH_LONG);
-                    //toast.show();
+                    Toast toast = Toast.makeText(getActivity(),"Estoy en Portrait", Toast.LENGTH_LONG);
+                    toast.show();
                     Intent intentPrincipal = new Intent(getActivity(), Main2Activity.class);
                     intentPrincipal.putExtra(MainActivityFragment.texto, "Hola tts");
                     startActivity(intentPrincipal);
 
 
                 }else {
-                    //Toast toast = Toast.makeText(getActivity(),"Estoy en LandScape", Toast.LENGTH_LONG);
-                    //toast.show();
+                    Toast toast = Toast.makeText(getActivity(),"Estoy en LandScape", Toast.LENGTH_LONG);
+                    toast.show();
                     comunicador.mensaje("Hola tts");
                 }
             }
