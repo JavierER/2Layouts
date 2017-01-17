@@ -36,11 +36,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityFragm
 
     @Override
     protected void onActivityResult (int requestCode, int resultCode, Intent data){
-        //Se comprueba si el resultCode es igual que el de el starActivity.
+        super.onActivityResult(requestCode, resultCode, data);
+        //Se comprueba si el resultCode es igual que el de el startActivity.
         if (requestCode == 1) {
             if (resultCode == RESULT_OK){
                 TextView textv = (TextView) findViewById(R.id.textocomprobar);
-                textv.setText("Gracias por pulsar el boton y ojear la interfaz!");
+                String respuesta = data.getStringExtra("Vuelta");
+                textv.setText(respuesta);
             }
 
         }

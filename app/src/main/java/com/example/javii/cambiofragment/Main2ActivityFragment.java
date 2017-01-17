@@ -1,5 +1,6 @@
 package com.example.javii.cambiofragment;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -30,6 +31,9 @@ public class Main2ActivityFragment extends Fragment {
             //Para cerrar el metodo con el boton
             @Override
             public void onClick(View v) {
+                Intent databack = new Intent();
+                databack.putExtra("Vuelta","Gracias por haber pulsado");
+                getActivity().setResult(getActivity().RESULT_OK, databack);
                 getActivity().finish();
             }
         });
