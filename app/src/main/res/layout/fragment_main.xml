@@ -12,6 +12,11 @@
     tools:context="com.example.javii.cambiofragment.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
+    <TextView
+        android:id="@+id/textocomprobar"
+        android:text="Bienvenido, pulse cambio."
+        android:layout_width="500dp"
+        android:layout_height="30dp" />
     <Button
         android:id="@+id/botoncambio"
         android:layout_width="200px"

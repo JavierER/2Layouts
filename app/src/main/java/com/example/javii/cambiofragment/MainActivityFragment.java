@@ -47,7 +47,7 @@ public class MainActivityFragment extends Fragment {
                     toast.show();
                     Intent intentPrincipal = new Intent(getActivity(), Main2Activity.class);
                     intentPrincipal.putExtra(MainActivityFragment.texto, "Hola tts");
-                    startActivity(intentPrincipal);
+                    startActivityForResult(intentPrincipal, 1);
 
 
                 }else {
